@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<object
+    name="portal_controlpanel"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="nnsh.content">
+
+    <configlet
+        title="Epaper setup"
+        action_id="nnsh.content.configlet.setting"
+        appId="nnsh.content"
+        category="Products"
+        condition_expr=""
+        url_expr="string:${portal_url}/@@epaperControlPanel"
+        icon_expr="string:/favicon.ico"
+        visible="True"
+        i18n:attributes="title">
+            <permission>Manage portal</permission>
+    </configlet>
+
+</object>
+

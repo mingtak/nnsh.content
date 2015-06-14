@@ -1,0 +1,3 @@
+<registry>
+  <records interface="nnsh.content.configlet.IEpaper" />
+</registry>

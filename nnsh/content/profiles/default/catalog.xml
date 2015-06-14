@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<object name="portal_catalog">
+
+    <index name="adLink" meta_type="FieldIndex">
+        <indexed_attr value="adLink"/>
+    </index>
+    <column value="adLink"/>
+
+    <index name="isBanner" meta_type="BooleanIndex">
+        <indexed_attr value="isBanner"/>
+    </index>
+    <column value="isBanner"/>
+
+</object>
+

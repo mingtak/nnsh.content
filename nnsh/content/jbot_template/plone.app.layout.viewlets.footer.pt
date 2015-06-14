@@ -1,0 +1,17 @@
+<div i18n:domain="plone"
+     id="portal-footer">
+
+<span class="copyright">
+Copyright <abbr title="Copyright">&copy;</abbr> 2014-<tal:year content="view/year" />
+基隆市立暖暖高級中學 Keelung Municipal NuanNuan Senior High School<br/>
+</span>
+
+<span class="address_c">
+205 基隆市暖暖區暖中路112號 Tel:886-2-24575534 Fax:886-2-24583499<br/>
+</span>
+
+<span class="address-e">
+No.112, Nuanzhong Rd., Nuannuan Dist., Keelung City 205, Taiwan (R.O.C)<br/>
+</span>
+
+</div>
