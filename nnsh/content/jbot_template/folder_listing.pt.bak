@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+<metal:content-core fill-slot="content-core">
+<metal:block define-macro="content-core"
+                    tal:define="kssClassesView context/@@kss_field_decorator_view;
+                                getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                                templateId template/getId">
+
+
+  <div tal:define="results context/@@folderListing;
+                   start request/start|python:0;
+                   batch python:modules['Products.CMFPlone'].Batch(results,
+                                size=20, 
+                                start=start);
+                   previous python:batch.previous;
+                   next python:batch.next">
+
+   <ul>
+  <tal:x repeat="result batch" >
+  
+         <li>
+          <span tal:replace="result/Title">Title goes here</span>,
+          <span tal:replace="result/author_name">author_name goes here</span>,
+          <span tal:replace="result/modified">modified goes here</span>,
+          <span tal:replace="result/Description">Description goes here</span>,
+          <span tal:replace="result/ModificationDate">ModificationDate goes here</span>,
+          <span tal:replace="result/review_state">review_state goes here</span>,
+          <span tal:replace="result/portal_type">portal_type goes here</span>,
+          <span tal:replace="result/Creator">Creator goes here</span>,
+        </li>
+
+  </tal:x>
+</ul>
+      
+  <p>
+    <a tal:condition="previous"
+       tal:attributes="href string:${request/URL0}?start:int=${previous/first}"
+       href="previous_url">previous <span tal:replace="previous/length">20</span> results</a>
+    <a tal:condition="next"
+       tal:attributes="href string:${request/URL0}?start:int=${next/first}"
+       href="next_url">next <span tal:replace="next/length">20</span> results</a>
+  </p>
+
+  </div>
+
+
+
+
+
+
+
+
+
+</metal:block>
+</metal:content-core>
+
+</body>
+</html>

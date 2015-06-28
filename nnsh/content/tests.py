@@ -52,6 +52,63 @@ def test_suite():
 
         # -*- extra stuff goes here -*-
 
+        # Integration tests for SubFolder
+        ztc.ZopeDocFileSuite(
+            'SubFolder.txt',
+            package='nnsh.content',
+            optionflags = OPTION_FLAGS,
+            test_class=TestCase),
+
+
+        # Integration tests for ThemeContent
+        ztc.ZopeDocFileSuite(
+            'ThemeContent.txt',
+            package='nnsh.content',
+            optionflags = OPTION_FLAGS,
+            test_class=TestCase),
+
+
+
+        # Integration tests for WebProfile
+        ztc.ZopeDocFileSuite(
+            'WebProfile.txt',
+            package='nnsh.content',
+            optionflags = OPTION_FLAGS,
+            test_class=TestCase),
+
+
+        # Integration tests for RegiForm
+        ztc.ZopeDocFileSuite(
+            'RegiForm.txt',
+            package='nnsh.content',
+            optionflags = OPTION_FLAGS,
+            test_class=TestCase),
+
+
+        # Integration tests for SurveyForm
+        ztc.ZopeDocFileSuite(
+            'SurveyForm.txt',
+            package='nnsh.content',
+            optionflags = OPTION_FLAGS,
+            test_class=TestCase),
+
+
+        # Integration tests for Forum
+        ztc.ZopeDocFileSuite(
+            'Forum.txt',
+            package='nnsh.content',
+            optionflags = OPTION_FLAGS,
+            test_class=TestCase),
+
+
+        # Integration tests for Epaper
+        ztc.ZopeDocFileSuite(
+            'Epaper.txt',
+            package='nnsh.content',
+            optionflags = OPTION_FLAGS,
+            test_class=TestCase),
+
+
         # Integration tests for Advertising
         ztc.ZopeDocFileSuite(
             'Advertising.txt',

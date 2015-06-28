@@ -1,0 +1,6 @@
+<div i18n:domain="nnsh.content">
+    <h3 style="float:right">
+        <a tal:attributes="href string:${context/absolute_url}/@@sendEpaper">發送電子報</a>
+    </h3>
+</div>
+

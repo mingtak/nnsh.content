@@ -20,25 +20,26 @@ from plone.formwidget.contenttree import ObjPathSourceBinder
 from nnsh.content import MessageFactory as _
 
 
-# Interface class; used to define content-type schema.
-
-class IAlbum(form.Schema, IImageScaleTraversable):
+class ISurveyForm(form.Schema, IImageScaleTraversable):
     """
-    Album folder
+    Surver form content type
     """
+    embededCode = schema.Text(
+        title=_(u"Embeded code"),
+        required=True
+    )
 
 
-class Album(Container):
-    grok.implements(IAlbum)
-
-    # Add your class methods and properties here
+class SurveyForm(Container):
+    grok.implements(ISurveyForm)
 
 
 class SampleView(grok.View):
     """ sample view class """
 
-    grok.context(IAlbum)
+    grok.context(ISurveyForm)
     grok.require('zope2.View')
+
     grok.name('view')
 
     # Add view methods here

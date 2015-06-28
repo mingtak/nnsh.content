@@ -22,23 +22,20 @@ from nnsh.content import MessageFactory as _
 
 # Interface class; used to define content-type schema.
 
-class IAlbum(form.Schema, IImageScaleTraversable):
+class IThemeContent(form.Schema, IImageScaleTraversable):
     """
-    Album folder
+    Theme content
     """
 
 
-class Album(Container):
-    grok.implements(IAlbum)
-
-    # Add your class methods and properties here
+class ThemeContent(Container):
+    grok.implements(IThemeContent)
 
 
 class SampleView(grok.View):
     """ sample view class """
 
-    grok.context(IAlbum)
+    grok.context(IThemeContent)
     grok.require('zope2.View')
-    grok.name('view')
 
-    # Add view methods here
+    # grok.name('view')

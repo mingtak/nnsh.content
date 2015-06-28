@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="nnsh.content">
+<body>
+
+<metal:main fill-slot="content-core">
+  <metal:content-core define-macro="content-core">
+
+<!--
+    <h2 tal:content="context/Title" />
+-->
+
+<div id="nnsh-news">
+    <h3 i18n:translate="">NNSH News</h3>
+    <tal:define define="catalog python:context.portal_catalog;
+                        brain python:catalog({'Type':['News Item', 'Epaper']}, sort_on='created', sort_order='reverse')">
+      <ul class="list">
+        <li tal:repeat="item python:brain[:20]">
+            <a tal:attributes="href item/getURL;
+                               title item/Description">
+              <img tal:condition="python:item.getObject().image"
+                   tal:attributes="src string:${item/getURL}/@@images/image/tile;
+                                   alt item/Title; title item/Title">
+              <img tal:condition="not:python:item.getObject().image"
+                   tal:attributes="alt item/Title; title item/Title"
+                   src="http://nnsh.mingtak.com.tw/system/201506211216/logo53bb80cc.png/@@images/image/tile" >
+              <span tal:replace="item/Title" />
+            </a>
+            <span tal:content="python:' -- %s' % item.created.strftime('%Y/%m/%d')"></span>
+            <p><tal:description content="item/Description" /></p>
+        </li>
+      </ul>
+    </tal:define>
+</div>
+
+
+
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<div id="nnsh-blocks">
+<!--    <h3 i18n:translate="">Home page blocks</h3> -->
+    <tal:block repeat="block view/getBlocks">
+        <div tal:switch="python:block.to_object.Type()">
+            <h4 tal:content="block/to_object/Title"></h4>
+            <ul tal:case="string:Folder">
+               <li tal:define="items block/to_object/@@folderListing"
+                   tal:repeat="item python:items[:5]">
+                   <a tal:attributes="href item/getURL; title item/Description" tal:content="item/Title" />
+               </li>
+               <a tal:attributes="href block/to_object/absolute_url" style="float:right" i18n:translate="">more...</a>
+            </ul>
+
+            <ul tal:case="string:Collection">
+               <li tal:repeat="item python:block.to_object.results()">
+                   <a tal:attributes="href item/getURL; title item/Description" tal:content="item/Title" />
+               </li>
+               <a tal:attributes="href block/to_object/absolute_url" style="float:right" i18n:translate="">more...</a>
+            </ul>
+
+            <div height="200" tal:case="string:Page" tal:content="structure block/to_object/text/raw" />
+            <hr/>
+        </div>
+    </tal:block>
+
+</div>

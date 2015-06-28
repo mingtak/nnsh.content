@@ -2,7 +2,7 @@ from five import grok
 
 from z3c.form import group, field
 from zope import schema
-from zope.interface import invariant, Invalid
+from zope.interface import invariant, Invalid, Interface
 from zope.schema.interfaces import IContextSourceBinder
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
 
@@ -16,29 +16,35 @@ from plone.namedfile.interfaces import IImageScaleTraversable
 from z3c.relationfield.schema import RelationList, RelationChoice
 from plone.formwidget.contenttree import ObjPathSourceBinder
 
-
 from nnsh.content import MessageFactory as _
 
 
-# Interface class; used to define content-type schema.
-
-class IAlbum(form.Schema, IImageScaleTraversable):
+class IEpaper(form.Schema, IImageScaleTraversable):
     """
-    Album folder
+    Epaper content type
     """
 
+    text = RichText(
+        title=_(u"Epaper head"),
+        description=_(u"Epaper head will show in deliver mail content head."),
+        required=True,
+    )
 
-class Album(Container):
-    grok.implements(IAlbum)
+    selectItems = RelationList(
+        title=_(u"Select epaper related contents."),
+        value_type=RelationChoice(
+            source=ObjPathSourceBinder(),
+        ),
+        required=True,
+    )
 
-    # Add your class methods and properties here
+
+class Epaper(Container):
+    grok.implements(IEpaper)
 
 
 class SampleView(grok.View):
     """ sample view class """
 
-    grok.context(IAlbum)
+    grok.context(IEpaper)
     grok.require('zope2.View')
-    grok.name('view')
-
-    # Add view methods here

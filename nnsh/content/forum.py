@@ -20,25 +20,26 @@ from plone.formwidget.contenttree import ObjPathSourceBinder
 from nnsh.content import MessageFactory as _
 
 
-# Interface class; used to define content-type schema.
-
-class IAlbum(form.Schema, IImageScaleTraversable):
+class IForum(form.Schema, IImageScaleTraversable):
     """
-    Album folder
+    Forum content type, allow discussion.
     """
+    text = RichText(
+        title=_('Text'),
+        required=True,
+    )
 
 
-class Album(Container):
-    grok.implements(IAlbum)
-
-    # Add your class methods and properties here
+class Forum(Container):
+    grok.implements(IForum)
 
 
 class SampleView(grok.View):
     """ sample view class """
 
-    grok.context(IAlbum)
+    grok.context(IForum)
     grok.require('zope2.View')
-    grok.name('view')
+
+    # grok.name('view')
 
     # Add view methods here

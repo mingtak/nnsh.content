@@ -1,0 +1,12 @@
+<div id="nnsh_ad">
+
+        <tal:repeat repeat="item view/getAd">
+            <a tal:attributes="href item/adLink;
+                               title item/Title"  target="_blank">
+                <img tal:attributes="src string:${item/getURL}/@@images/image/large;
+                                     alt item/Description" />
+            </a>
+            <br/><br/>
+        </tal:repeat>
+
+</div>

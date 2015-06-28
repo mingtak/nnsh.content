@@ -8,6 +8,12 @@
   -->
 <object name="portal_types" meta_type="Plone Types Tool">
   <!-- -*- extra stuff goes here -*- -->
+  <object name="nnsh.content.subfolder" meta_type="Dexterity FTI" />
+  <object name="nnsh.content.themecontent" meta_type="Dexterity FTI" />
+  <object name="nnsh.content.webprofile" meta_type="Dexterity FTI" />
+  <object name="nnsh.content.surveyform" meta_type="Dexterity FTI" />
+  <object name="nnsh.content.forum" meta_type="Dexterity FTI" />
+  <object name="nnsh.content.epaper" meta_type="Dexterity FTI" />
   <object name="nnsh.content.advertising" meta_type="Dexterity FTI" />
   <object name="nnsh.content.album" meta_type="Dexterity FTI" />
 </object>
