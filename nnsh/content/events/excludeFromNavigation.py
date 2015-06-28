@@ -9,7 +9,7 @@ from nnsh.content.forum import IForum
 from nnsh.content.epaper import IEpaper
 from Acquisition import aq_base
 
-
+"""
 @grok.subscribe(IDocument, IObjectAddedEvent)
 @grok.subscribe(IImage, IObjectAddedEvent)
 @grok.subscribe(IEvent, IObjectAddedEvent)
@@ -18,6 +18,7 @@ from Acquisition import aq_base
 @grok.subscribe(IFile, IObjectAddedEvent)
 @grok.subscribe(IEpaper, IObjectAddedEvent)
 @grok.subscribe(IForum, IObjectAddedEvent)
+"""
 def moveContentToTop(obj, event):
     """
     Turning off "Inherit permissions from higher levels"

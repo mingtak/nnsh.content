@@ -15,6 +15,25 @@ from nnsh.content import MessageFactory as _
 #grok.templatedir('template')
 
 
+class GetThemeId(grok.View):
+    """ get selectTheme value, default value is 'porto' """
+
+    grok.context(Interface)
+    grok.require('zope2.View')
+    grok.name('get_theme_id')
+
+    def render(self):
+        folder = self.context
+        while folder.Type() not in ['Folder', 'Plone Site', 'WebProfile']:
+            folder = folder.getParentNode()
+        theme = getattr(folder, 'selectTheme', None)
+        if theme is not None:
+            themeId = theme.to_object.getId()
+        else:
+            themeId = 'porto'
+        return themeId
+
+
 class PreviewTheme(grok.View):
     grok.context(Interface)
     grok.require('zope2.View')
@@ -28,6 +47,7 @@ class PreviewTheme(grok.View):
         )
         if self.context.Type() == 'Plone Site':
             return
+        api.portal.show_message(message=_(u'This is preview page.'), request=self.request, type='info')
         return view()
 
 

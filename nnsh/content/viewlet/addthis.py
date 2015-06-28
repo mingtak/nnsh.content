@@ -4,6 +4,7 @@ from plone.app.layout.viewlets.interfaces import IAboveContentTitle
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from nnsh.content.epaper import IEpaper
 from nnsh.content.album import IAlbum
+from nnsh.content.forum import IForum
 from plone.app.contenttypes.interfaces import IDocument, IEvent, IFile, INewsItem
 from plone import api
 
@@ -66,6 +67,16 @@ class Addthis_IAboveContentTitle_IAlbum(grok.Viewlet):
 class Addthis_IAboveContentTitle_IEpaper(grok.Viewlet):
     grok.viewletmanager(IAboveContentTitle)
     grok.context(IEpaper)
+    grok.require('zope2.View')
+    grok.template('addthis')
+
+    def update(self):
+        return
+
+
+class Addthis_IAboveContentTitle_IForum(grok.Viewlet):
+    grok.viewletmanager(IAboveContentTitle)
+    grok.context(IForum)
     grok.require('zope2.View')
     grok.template('addthis')
 

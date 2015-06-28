@@ -26,8 +26,10 @@
   <property name="klass">nnsh.content.subfolder.SubFolder</property>
 
   <property name="behaviors">
-     <element value="plone.app.content.interfaces.INameFromTitle" />
+<!--     <element value="plone.app.content.interfaces.INameFromTitle" /> -->
+     <element value="funlog.behavior.namedfromtimestamp.INamedFromTimeStamp" />
      <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>
+     <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
    </property>
 
   <!-- View information -->

@@ -16,6 +16,21 @@ from nnsh.content import MessageFactory as _
 class AddForm(DefaultAddForm):
     template = ViewPageTemplateFile('template/addForm.pt')
 
+    def update(self):
+        DefaultAddForm.update(self)
+
+    def updateWidgets(self):
+        super(AddForm, self).updateWidgets()
+
+        # override exclude_from_nav's default value
+        for group in self.groups:
+            if group.label == u'Settings':
+                group.fields['IExcludeFromNavigation.exclude_from_nav'].field.default = True
+                break
+        return
+
+
+
 
 class AddView(DefaultAddView):
     form = AddForm
