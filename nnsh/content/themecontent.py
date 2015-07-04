@@ -37,5 +37,4 @@ class SampleView(grok.View):
 
     grok.context(IThemeContent)
     grok.require('zope2.View')
-
-    # grok.name('view')
+    grok.name('view')

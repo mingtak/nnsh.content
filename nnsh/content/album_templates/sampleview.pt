@@ -7,22 +7,24 @@
       i18n:domain="nnsh.content">
 <body>
 
-<tal:comment tal:condition="nothing">
-    This is a sample view template. It will not be used for rendering the
-    content unless activated by creation of a view class with a matching name.
-</tal:comment>
-
 <metal:main fill-slot="content-core">
   <metal:content-core define-macro="content-core">
 
-    <h2>
-        Rendered from
-        album_templates/<span tal:replace="template/id" />
-    </h2>
+<div class="album_list">
+    <h3 tal:content="context/Title" />
+    <div tal:content="context/Description" />
 
+    <div class="imagelisting" tal:define="items context/@@folderListing">
 
-    <div tal:content="context/Title">Title inserted here</div>
+      <img tal:repeat="item items"
+           tal:attributes="src string:${item/getURL}/@@images/image/mini/;
+                           short_src string:${item/getURL}/@@images/image/;
+                           title item/Title; 
+                           alt item/image/filename" />
 
+    </div>
+
+</div>
   </metal:content-core>
 </metal:main>
 

@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="nnsh.content">
+<body>
+
+<metal:main fill-slot="content-core">
+  <metal:content-core define-macro="content-core">
+
+    <img tal:condition="context/image"
+         tal:attributes="src string:${context/absolute_url}/@@images/image/mini;
+                         alt context/Description;
+                         title context/Title"
+         style="float:left; margin: 20px 20px 20px 20px;" />
+
+
+<h3 tal:content="context/Title"></h3>
+
+    <div tal:content="structure context/text/output | nothing">Text</div>
+
+<ul>
+<li><strong i18n:translate="">Event name: </strong><span tal:replace="context/Title" /></li>
+<li><strong i18n:translate="">Location: </strong><span tal:replace="context/location" /></li>
+
+<li><strong i18n:translate="">Period: </strong>
+    <span tal:replace="python:'%s ~ %s' % (context.start_date.strftime('%Y/%m/%d'), context.end_date.strftime('%Y/%m/%d'))" />
+</li>
+
+<li><strong i18n:translate="">Attendees: </strong><span tal:replace="context/attendees" /></li>   
+<li><strong i18n:translate="">Event URL: </strong>
+    <a tal:attributes="href context/event_url">
+      <span tal:replace="context/event_url" />
+    </a>
+</li>
+<li><strong i18n:translate="">Contact: </strong><span tal:replace="context/contact_name" /></li>
+<li><strong i18n:translate="">Contact Email: </strong>
+    <a tal:attributes="href string:mailto:${context/contact_email}">
+      <span tal:replace="context/contact_email" />
+    </a>
+</li>
+<li><strong i18n:translate="">Contact Phone: </strong><span tal:replace="context/contact_phone" /></li>    
+</ul>
+
+
+    <div tal:content="structure context/embededCode">Text</div>
+
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>
+

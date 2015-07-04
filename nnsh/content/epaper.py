@@ -48,3 +48,4 @@ class SampleView(grok.View):
 
     grok.context(IEpaper)
     grok.require('zope2.View')
+    grok.name('view')

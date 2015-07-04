@@ -1,0 +1,212 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2015-07-01 02:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: nnsh.content\n"
+
+#: ./profiles/default/types/nnsh.content.advertising.xml
+msgid "Advertising"
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.advertising.xml
+msgid "Advertising content type"
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.album.xml
+msgid "Album"
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.album.xml
+msgid "Album folder"
+msgstr ""
+
+#: ./browser/template/event_view.pt:32
+msgid "Attendees:"
+msgstr ""
+
+#: ./webprofile.py:49
+msgid "Block"
+msgstr ""
+
+#: ./browser/template/event_view.pt:39
+msgid "Contact Email:"
+msgstr ""
+
+#: ./browser/template/event_view.pt:44
+msgid "Contact Phone:"
+msgstr ""
+
+#: ./browser/template/event_view.pt:38
+msgid "Contact:"
+msgstr ""
+
+#: ./browser/template/folder_view.pt:21
+msgid "Contents"
+msgstr ""
+
+#: ./surveyform.py:28
+msgid "Embeded code"
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.epaper.xml
+msgid "Epaper"
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.epaper.xml
+msgid "Epaper content type"
+msgstr ""
+
+#: ./configlet.py:31
+msgid "Epaper control papel"
+msgstr ""
+
+#: ./epaper.py:28
+msgid "Epaper head"
+msgstr ""
+
+#: ./epaper.py:29
+msgid "Epaper head will show in deliver mail content head."
+msgstr ""
+
+#: ./configlet.py:21
+msgid "Epaper history log"
+msgstr ""
+
+#: ./profiles/default/controlpanel.xml
+msgid "Epaper setup"
+msgstr ""
+
+#: ./browser/template/event_view.pt:33
+msgid "Event URL:"
+msgstr ""
+
+#: ./browser/template/event_view.pt:25
+msgid "Event name:"
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.forum.xml
+msgid "Forum"
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.forum.xml
+msgid "Forum content type, allow discussion."
+msgstr ""
+
+#: ./advertising.py:40
+msgid "If want to show at Banner, please checked it, else show at sidebar"
+msgstr ""
+
+#: ./advertising.py:29
+msgid "Image"
+msgstr ""
+
+#: ./advertising.py:39
+msgid "Is Banner ?"
+msgstr ""
+
+#: ./browser/template/event_view.pt:26
+msgid "Location:"
+msgstr ""
+
+#: ./subfolder_templates/sampleview.pt:14
+#: ./webprofile_templates/sampleview.pt:18
+msgid "NNSH News"
+msgstr ""
+
+#: ./browser/template/event_view.pt:28
+msgid "Period:"
+msgstr ""
+
+#: ./webprofile.py:50
+msgid "Please select choice 4 blocks"
+msgstr ""
+
+#: ./profiles/default/actions.xml
+msgid "Preview"
+msgstr ""
+
+#: ./configlet.py:15
+msgid "Registry to receive e-paper's mail list"
+msgstr ""
+
+#: ./webprofile.py:43
+msgid "Related"
+msgstr ""
+
+#: ./epaper_templates/sampleview.pt:21
+msgid "Related content"
+msgstr ""
+
+#: ./advertising.py:34
+msgid "Remote URL"
+msgstr ""
+
+#: ./epaper.py:34
+msgid "Select epaper related contents."
+msgstr ""
+
+#: ./webprofile.py:39
+msgid "Slides"
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.subfolder.xml
+msgid "Sub folder"
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.subfolder.xml
+msgid "SubFolder"
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.surveyform.xml
+msgid "Surver form content type"
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.surveyform.xml
+msgid "SurveyForm"
+msgstr ""
+
+#: ./forum.py:28
+msgid "Text"
+msgstr ""
+
+#: ./browser/addSubscribe.py:43
+msgid "Thank you for subscript."
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.themecontent.xml
+msgid "Theme content"
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.themecontent.xml
+msgid "ThemeContent"
+msgstr ""
+
+#: ./browser/views.py:55
+msgid "This is preview page."
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.webprofile.xml
+msgid "WebProfile"
+msgstr ""
+
+#: ./profiles/default/types/nnsh.content.webprofile.xml
+msgid "Website profile"
+msgstr ""
+
+#: ./webprofile.py:40
+msgid "can choice 4 images"
+msgstr ""
+

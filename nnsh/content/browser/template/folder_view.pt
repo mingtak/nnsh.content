@@ -9,18 +9,25 @@
 
 <metal:main fill-slot="content-core">
   <metal:content-core define-macro="content-core">
+<!--
+    <img tal:condition="context/image"
+         tal:attributes="src string:${context/absolute_url}/@@images/image/mini;
+                         alt context/Description;
+                         title context/Title"
+         style="float:left; margin: 20px 20px 20px 20px;" />
+-->
 
-<div id="nnsh-news">
-    <h3 i18n:translate="">NNSH News</h3>
+<div id="nnsh-floder">
+    <h3 i18n:translate="">Contents</h3>
     <tal:define define="brain context/@@folderListing">
       <ul class="list">
-        <li tal:repeat="item python:brain[:20]">
+        <li tal:repeat="item python:brain">
             <a tal:attributes="href item/getURL;
                                title item/Description">
-              <img tal:condition="python:item.getObject().image"
+              <img tal:condition="python:getattr(item.getObject(), 'image', False)"
                    tal:attributes="src string:${item/getURL}/@@images/image/tile;
                                    alt item/Title; title item/Title">
-              <img tal:condition="not:python:item.getObject().image"
+              <img tal:condition="python:not getattr(item.getObject(), 'image', False)"
                    tal:attributes="alt item/Title; title item/Title"
                    src="http://nnsh.mingtak.com.tw/system/201506211216/logo53bb80cc.png/@@images/image/tile" >
               <span tal:replace="item/Title" />
@@ -31,6 +38,9 @@
       </ul>
     </tal:define>
 </div>
+
+
+
 
 
   </metal:content-core>

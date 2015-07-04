@@ -11,5 +11,11 @@
     </index>
     <column value="isBanner"/>
 
+    <index name="parentTitle" meta_type="FieldIndex">
+        <indexed_attr value="parentTitle"/>
+    </index>
+    <column value="parentTitle"/>
+
+
 </object>
 

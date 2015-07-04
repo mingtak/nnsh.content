@@ -30,6 +30,7 @@
                    src="http://nnsh.mingtak.com.tw/system/201506211216/logo53bb80cc.png/@@images/image/tile" >
               <span tal:replace="item/Title" />
             </a>
+            <span tal:content="python:' [%s]' % item.parentTitle" />
             <span tal:content="python:' -- %s' % item.created.strftime('%Y/%m/%d')"></span>
             <p><tal:description content="item/Description" /></p>
         </li>

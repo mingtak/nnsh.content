@@ -1,0 +1,209 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2015-07-01 02:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ./profiles/default/types/nnsh.content.advertising.xml
+msgid "Advertising"
+msgstr "廣告"
+
+#: ./profiles/default/types/nnsh.content.advertising.xml
+msgid "Advertising content type"
+msgstr "廣告型態"
+
+#: ./profiles/default/types/nnsh.content.album.xml
+msgid "Album"
+msgstr "相簿"
+
+#: ./profiles/default/types/nnsh.content.album.xml
+msgid "Album folder"
+msgstr "相簿資料夾"
+
+#: ./browser/template/event_view.pt:32
+msgid "Attendees:"
+msgstr "報名資格:"
+
+#: ./webprofile.py:49
+msgid "Block"
+msgstr "區塊"
+
+#: ./browser/template/event_view.pt:39
+msgid "Contact Email:"
+msgstr "聯絡人email:"
+
+#: ./browser/template/event_view.pt:44
+msgid "Contact Phone:"
+msgstr "聯絡人電話"
+
+#: ./browser/template/event_view.pt:38
+msgid "Contact:"
+msgstr "聯絡人:"
+
+#: ./browser/template/folder_view.pt:21
+msgid "Contents"
+msgstr "內容"
+
+#: ./surveyform.py:28
+msgid "Embeded code"
+msgstr "嵌入代碼,例如google 表單、google 行事曆等..."
+
+#: ./profiles/default/types/nnsh.content.epaper.xml
+msgid "Epaper"
+msgstr "電子報"
+
+#: ./profiles/default/types/nnsh.content.epaper.xml
+msgid "Epaper content type"
+msgstr "編輯電子報"
+
+#: ./configlet.py:31
+msgid "Epaper control papel"
+msgstr "電子報設定"
+
+#: ./epaper.py:28
+msgid "Epaper head"
+msgstr "電子報報頭"
+
+#: ./epaper.py:29
+msgid "Epaper head will show in deliver mail content head."
+msgstr "電子報報頭將會顯示在收件者的郵件開頭的地方"
+
+#: ./configlet.py:21
+msgid "Epaper history log"
+msgstr "電子報歷史記錄"
+
+#: ./profiles/default/controlpanel.xml
+msgid "Epaper setup"
+msgstr "電子報設定"
+
+#: ./browser/template/event_view.pt:33
+msgid "Event URL:"
+msgstr "活動網址:"
+
+#: ./browser/template/event_view.pt:25
+msgid "Event name:"
+msgstr "活動名稱:"
+
+#: ./profiles/default/types/nnsh.content.forum.xml
+msgid "Forum"
+msgstr "討論"
+
+#: ./profiles/default/types/nnsh.content.forum.xml
+msgid "Forum content type, allow discussion."
+msgstr "討論區文章，允許有登入的訪客留言"
+
+#: ./advertising.py:40
+msgid "If want to show at Banner, please checked it, else show at sidebar"
+msgstr "如果要以橫幅方式顯示，請在這裏打勾，若不打勾，則會顯示在側邊欄"
+
+#: ./advertising.py:29
+msgid "Image"
+msgstr "圖檔"
+
+#: ./advertising.py:39
+msgid "Is Banner ?"
+msgstr "是否以橫幅顯示?"
+
+#: ./browser/template/event_view.pt:26
+msgid "Location:"
+msgstr "地點:"
+
+#: ./subfolder_templates/sampleview.pt:14
+#: ./webprofile_templates/sampleview.pt:18
+msgid "NNSH News"
+msgstr "暖中最新消息"
+
+#: ./browser/template/event_view.pt:28
+msgid "Period:"
+msgstr "活動其間:"
+
+#: ./webprofile.py:50
+msgid "Please select choice 4 blocks"
+msgstr "請選擇4個項目做為區塊顯示"
+
+#: ./profiles/default/actions.xml
+msgid "Preview"
+msgstr "預覽"
+
+#: ./configlet.py:15
+msgid "Registry to receive e-paper's mail list"
+msgstr "訂閱電子報的郵件列表"
+
+#: ./webprofile.py:43
+msgid "Related"
+msgstr "關聯"
+
+#: ./epaper_templates/sampleview.pt:21
+msgid "Related content"
+msgstr "關聯的頁面"
+
+#: ./advertising.py:34
+msgid "Remote URL"
+msgstr "遠端網址"
+
+#: ./epaper.py:34
+msgid "Select epaper related contents."
+msgstr "選擇本期電子報相關的內容"
+
+#: ./webprofile.py:39
+msgid "Slides"
+msgstr "幻燈片"
+
+#: ./profiles/default/types/nnsh.content.subfolder.xml
+msgid "Sub folder"
+msgstr "子資料夾"
+
+#: ./profiles/default/types/nnsh.content.subfolder.xml
+msgid "SubFolder"
+msgstr "子資料夾"
+
+#: ./profiles/default/types/nnsh.content.surveyform.xml
+msgid "Surver form content type"
+msgstr "表單頁面"
+
+#: ./profiles/default/types/nnsh.content.surveyform.xml
+msgid "SurveyForm"
+msgstr "嵌入式表單"
+
+#: ./forum.py:28
+msgid "Text"
+msgstr "文字"
+
+#: ./browser/addSubscribe.py:43
+msgid "Thank you for subscript."
+msgstr "感謝您的訂閱。"
+
+#: ./profiles/default/types/nnsh.content.themecontent.xml
+msgid "Theme content"
+msgstr "佈景主題"
+
+#: ./profiles/default/types/nnsh.content.themecontent.xml
+msgid "ThemeContent"
+msgstr "佈景主題"
+
+#: ./browser/views.py:55
+msgid "This is preview page."
+msgstr "這是一個預覽頁面"
+
+#: ./profiles/default/types/nnsh.content.webprofile.xml
+msgid "WebProfile"
+msgstr "網站設定"
+
+#: ./profiles/default/types/nnsh.content.webprofile.xml
+msgid "Website profile"
+msgstr "網站設定"
+
+#: ./webprofile.py:40
+msgid "can choice 4 images"
+msgstr "最多可以選擇4張圖檔"
+

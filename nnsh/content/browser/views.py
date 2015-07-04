@@ -23,6 +23,7 @@ class GetThemeId(grok.View):
     grok.name('get_theme_id')
 
     def render(self):
+        catalog = self.context.portal_catalog
         folder = self.context
         while folder.Type() not in ['Folder', 'Plone Site', 'WebProfile']:
             folder = folder.getParentNode()
@@ -30,7 +31,11 @@ class GetThemeId(grok.View):
         if theme is not None:
             themeId = theme.to_object.getId()
         else:
-            themeId = 'porto'
+            try:
+                homepage = catalog({'Type':'WebProfile', 'id':'index_html'})[0]
+                themeId = homepage.selectTheme
+            except:
+                themeId = 'porto'
         return themeId
 
 
