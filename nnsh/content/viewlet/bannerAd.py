@@ -25,7 +25,7 @@ class BannerAd_IBelowContent_Interface(grok.Viewlet):
     def getAd(self):
         context = self.context
         catalog = context.portal_catalog
-        brain = catalog({"Type":"Advertising", "isBanner":"True"})
+        brain = catalog({"Type":"Advertising", "isBanner":"True"}, sort_on="modified", sort_order="reverse")
         return brain
 
     def render(self):

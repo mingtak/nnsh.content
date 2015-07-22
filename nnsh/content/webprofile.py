@@ -81,5 +81,5 @@ def parentTitle_indexer(obj):
         if parentNode.Type() in ['Folder', 'Plone Site']:
             break
         parentNode = parentNode.getParentNode()
-    return parentNode.title
+    return parentNode.Title()
 grok.global_adapter(parentTitle_indexer, name='parentTitle')
