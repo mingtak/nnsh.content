@@ -14,20 +14,23 @@
     <h3 i18n:translate="">NNSH News</h3>
     <tal:define define="brain context/@@folderListing">
       <ul class="list">
-        <li tal:repeat="item python:brain[:20]">
+<tal:getItem repeat="item python:brain[:20]">
+        <li tal:condition="python:item.Type() != 'Image'">
             <a tal:attributes="href item/getURL;
                                title item/Description">
-              <img tal:condition="python:item.getObject().image"
+              <img tal:condition="python:getattr(item.getObject(), 'image', False)"
                    tal:attributes="src string:${item/getURL}/@@images/image/tile;
                                    alt item/Title; title item/Title">
-              <img tal:condition="not:python:item.getObject().image"
-                   tal:attributes="alt item/Title; title item/Title"
-                   src="http://nnsh.mingtak.com.tw/system/201506211216/logo53bb80cc.png/@@images/image/tile" >
+              <img tal:condition="not:python:getattr(item.getObject(), 'image', False)"
+                   tal:attributes="alt item/Title; title item/Title;
+                                   src string:${context/absolute_url}/system/201506211216/logo53bb80cc.png/@@images/image/tile">
               <span tal:replace="item/Title" />
             </a>
+<!--            <span tal:content="python:' [%s] ' % item.Type()"></span> -->
             <span tal:content="python:' -- %s' % item.created.strftime('%Y/%m/%d')"></span>
             <p><tal:description content="item/Description" /></p>
         </li>
+</tal:getItem>
       </ul>
     </tal:define>
 </div>

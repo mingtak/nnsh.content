@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-07-01 02:03+0000\n"
+"POT-Creation-Date: 2015-07-22 22:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr "相簿資料夾"
 msgid "Attendees:"
 msgstr "報名資格:"
 
-#: ./webprofile.py:49
+#: ./webprofile.py:53
 msgid "Block"
 msgstr "區塊"
 
@@ -127,7 +127,7 @@ msgstr "暖中最新消息"
 msgid "Period:"
 msgstr "活動其間:"
 
-#: ./webprofile.py:50
+#: ./webprofile.py:54
 msgid "Please select choice 4 blocks"
 msgstr "請選擇4個項目做為區塊顯示"
 
@@ -139,7 +139,7 @@ msgstr "預覽"
 msgid "Registry to receive e-paper's mail list"
 msgstr "訂閱電子報的郵件列表"
 
-#: ./webprofile.py:43
+#: ./webprofile.py:47
 msgid "Related"
 msgstr "關聯"
 
@@ -155,7 +155,7 @@ msgstr "遠端網址"
 msgid "Select epaper related contents."
 msgstr "選擇本期電子報相關的內容"
 
-#: ./webprofile.py:39
+#: ./webprofile.py:43
 msgid "Slides"
 msgstr "幻燈片"
 
@@ -203,7 +203,7 @@ msgstr "網站設定"
 msgid "Website profile"
 msgstr "網站設定"
 
-#: ./webprofile.py:40
+#: ./webprofile.py:44
 msgid "can choice 4 images"
 msgstr "最多可以選擇4張圖檔"
 

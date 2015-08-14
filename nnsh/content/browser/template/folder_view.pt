@@ -28,8 +28,8 @@
                    tal:attributes="src string:${item/getURL}/@@images/image/tile;
                                    alt item/Title; title item/Title">
               <img tal:condition="python:not getattr(item.getObject(), 'image', False)"
-                   tal:attributes="alt item/Title; title item/Title"
-                   src="http://nnsh.mingtak.com.tw/system/201506211216/logo53bb80cc.png/@@images/image/tile" >
+                   tal:attributes="alt item/Title; title item/Title;
+                                   src string:${context/absolute_url}/system/201506211216/logo53bb80cc.png/@@images/image/tile">
               <span tal:replace="item/Title" />
             </a>
             <span tal:content="python:' -- %s' % item.created.strftime('%Y/%m/%d')"></span>

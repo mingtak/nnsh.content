@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-07-01 02:03+0000\n"
+"POT-Creation-Date: 2015-07-22 22:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgstr ""
 msgid "Attendees:"
 msgstr ""
 
-#: ./webprofile.py:49
+#: ./webprofile.py:53
 msgid "Block"
 msgstr ""
 
@@ -130,7 +130,7 @@ msgstr ""
 msgid "Period:"
 msgstr ""
 
-#: ./webprofile.py:50
+#: ./webprofile.py:54
 msgid "Please select choice 4 blocks"
 msgstr ""
 
@@ -142,7 +142,7 @@ msgstr ""
 msgid "Registry to receive e-paper's mail list"
 msgstr ""
 
-#: ./webprofile.py:43
+#: ./webprofile.py:47
 msgid "Related"
 msgstr ""
 
@@ -158,7 +158,7 @@ msgstr ""
 msgid "Select epaper related contents."
 msgstr ""
 
-#: ./webprofile.py:39
+#: ./webprofile.py:43
 msgid "Slides"
 msgstr ""
 
@@ -206,7 +206,7 @@ msgstr ""
 msgid "Website profile"
 msgstr ""
 
-#: ./webprofile.py:40
+#: ./webprofile.py:44
 msgid "can choice 4 images"
 msgstr ""
 

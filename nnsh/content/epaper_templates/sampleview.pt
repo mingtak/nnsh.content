@@ -21,7 +21,8 @@
     <h4 i18n:translate="">Related content</h4>
     <ul>
         <li tal:repeat="item context/selectItems">
-          <a tal:attributes="href item/to_object/absolute_url;
+          <a tal:condition="item/to_object"
+             tal:attributes="href item/to_object/absolute_url;
                              alt item/to_object/Title;
                              title item/to_object/Title"
              tal:content="item/to_object/Title" />
