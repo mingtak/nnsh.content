@@ -23,6 +23,8 @@ class GetThemeId(grok.View):
     grok.name('get_theme_id')
 
     def render(self):
+        if not hasattr(self.context, 'portal_catalog'):
+            return
         catalog = self.context.portal_catalog
         folder = self.context
         while folder.Type() not in ['Folder', 'Plone Site', 'WebProfile']:
@@ -90,4 +92,7 @@ class GetType(grok.View):
     grok.name('get_type')
 
     def render(self):
-        return self.context.Type()
+        try:
+            return self.context.Type()
+        except:
+            pass
