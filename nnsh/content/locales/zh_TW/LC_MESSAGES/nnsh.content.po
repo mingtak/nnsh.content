@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-07-22 22:11+0000\n"
+"POT-Creation-Date: 2015-10-15 03:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,7 +119,6 @@ msgid "Location:"
 msgstr "地點:"
 
 #: ./subfolder_templates/sampleview.pt:14
-#: ./webprofile_templates/sampleview.pt:18
 msgid "NNSH News"
 msgstr "暖中最新消息"
 
@@ -191,7 +190,7 @@ msgstr "佈景主題"
 msgid "ThemeContent"
 msgstr "佈景主題"
 
-#: ./browser/views.py:55
+#: ./browser/views.py:57
 msgid "This is preview page."
 msgstr "這是一個預覽頁面"
 
@@ -203,7 +202,51 @@ msgstr "網站設定"
 msgid "Website profile"
 msgstr "網站設定"
 
+#: ./webprofile_templates/sampleview.pt:20
+msgid "adma"
+msgstr "教務處"
+
+#: ./webprofile_templates/sampleview.pt:21
+msgid "admb"
+msgstr "學務處"
+
+#: ./webprofile_templates/sampleview.pt:22
+msgid "admc"
+msgstr "輔導處"
+
+#: ./webprofile_templates/sampleview.pt:23
+msgid "admd"
+msgstr "總務處"
+
+#: ./webprofile_templates/sampleview.pt:24
+msgid "adme"
+msgstr "圖書館"
+
+#: ./webprofile_templates/sampleview.pt:25
+msgid "admf"
+msgstr "人事室"
+
+#: ./webprofile_templates/sampleview.pt:26
+msgid "admg"
+msgstr "會計室"
+
 #: ./webprofile.py:44
 msgid "can choice 4 images"
 msgstr "最多可以選擇4張圖檔"
+
+#: ./webprofile_templates/sampleview.pt:171
+msgid "conworker"
+msgstr "教職員專區"
+
+#: ./webprofile_templates/sampleview.pt:172
+msgid "honor"
+msgstr "榮譽榜"
+
+#: ./webprofile_templates/sampleview.pt:169
+msgid "news"
+msgstr "最新消息"
+
+#: ./webprofile_templates/sampleview.pt:170
+msgid "student"
+msgstr "學生專區"
 

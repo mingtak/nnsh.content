@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-07-22 22:11+0000\n"
+"POT-Creation-Date: 2015-10-15 03:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -122,7 +122,6 @@ msgid "Location:"
 msgstr ""
 
 #: ./subfolder_templates/sampleview.pt:14
-#: ./webprofile_templates/sampleview.pt:18
 msgid "NNSH News"
 msgstr ""
 
@@ -194,7 +193,7 @@ msgstr ""
 msgid "ThemeContent"
 msgstr ""
 
-#: ./browser/views.py:55
+#: ./browser/views.py:57
 msgid "This is preview page."
 msgstr ""
 
@@ -206,7 +205,51 @@ msgstr ""
 msgid "Website profile"
 msgstr ""
 
+#: ./webprofile_templates/sampleview.pt:20
+msgid "adma"
+msgstr ""
+
+#: ./webprofile_templates/sampleview.pt:21
+msgid "admb"
+msgstr ""
+
+#: ./webprofile_templates/sampleview.pt:22
+msgid "admc"
+msgstr ""
+
+#: ./webprofile_templates/sampleview.pt:23
+msgid "admd"
+msgstr ""
+
+#: ./webprofile_templates/sampleview.pt:24
+msgid "adme"
+msgstr ""
+
+#: ./webprofile_templates/sampleview.pt:25
+msgid "admf"
+msgstr ""
+
+#: ./webprofile_templates/sampleview.pt:26
+msgid "admg"
+msgstr ""
+
 #: ./webprofile.py:44
 msgid "can choice 4 images"
+msgstr ""
+
+#: ./webprofile_templates/sampleview.pt:171
+msgid "conworker"
+msgstr ""
+
+#: ./webprofile_templates/sampleview.pt:172
+msgid "honor"
+msgstr ""
+
+#: ./webprofile_templates/sampleview.pt:169
+msgid "news"
+msgstr ""
+
+#: ./webprofile_templates/sampleview.pt:170
+msgid "student"
 msgstr ""
 
