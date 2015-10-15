@@ -20,6 +20,7 @@
  <property name="add_permission">plone.app.contenttypes.addNewsItem</property>
  <property name="klass">plone.app.contenttypes.content.NewsItem</property>
  <property name="behaviors">
+  <element value="nnsh.behavior.classification.IClassification" />
   <element value="nnsh.behavior.attachedfile.IAttachedFile" />
   <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
 <!--  <element value="plone.app.content.interfaces.INameFromTitle"/> -->
