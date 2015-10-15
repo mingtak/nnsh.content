@@ -14,31 +14,233 @@
     <h2 tal:content="context/Title" />
 -->
 
-<div id="nnsh-news">
-    <h3 i18n:translate="">NNSH News</h3>
-    <tal:define define="catalog python:context.portal_catalog;
-                        brain python:catalog({'Type':['News Item', 'Epaper']}, sort_on='created', sort_order='reverse')">
-      <ul class="list">
-        <li tal:repeat="item python:brain[:20]">
-            <a tal:attributes="href item/getURL;
-                               title item/Description">
-<!--              <img tal:condition="python:item.getObject().image"
-                   tal:attributes="src string:${item/getURL}/@@images/image/tile;
-                                   alt item/Title; title item/Title">
-              <img tal:condition="not:python:item.getObject().image"
-                   tal:attributes="alt item/Title; title item/Title;
-                                   src string:${context/absolute_url}/system/201506211216/logo53bb80cc.png/@@images/image/tile">
--->
-              <span tal:replace="item/Title" />
-            </a>
-            <span tal:content="python:' [%s]' % item.parentTitle" />
-            <span tal:content="python:' -- %s' % item.created.strftime('%Y/%m/%d')"></span>
-            <p><tal:description content="item/Description" /></p>
-        </li>
-      </ul>
+<div class="tabs">
+        <h2>分類訊息</h2>
+        <ul class="nav nav-tabs">
+         <li class="active"><a data-toggle="tab" href="#newstab" i18n:translate="">news</a></li>
+         <li><a data-toggle="tab" href="#studenttab" i18n:translate="">student</a></li>
+         <li><a data-toggle="tab" href="#coworkertab" i18n:translate="">conworker</a></li>
+         <li><a data-toggle="tab" href="#honortab" i18n:translate="">honor</a></li>
+        </ul>
+
+
+
+        <div class="tab-content" tal:define="catalog python:context.portal_catalog">
+
+    <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'classify':'news'},
+                                             sort_on='created', sort_order='reverse')">
+         <div id="newstab" class="tab-pane active">
+          <ul class="simple-post-list">
+           <li tal:repeat="item brain">
+
+            <div class="post-info">
+             <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
+             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
+               Jan 10, 2013
+             </div>
+            </div>
+           </li>
+          </ul>
+         </div>
     </tal:define>
 
+    <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'classify':'student'},
+                                             sort_on='created', sort_order='reverse')">
+         <div id="studenttab" class="tab-pane active">
+          <ul class="simple-post-list">
+           <li tal:repeat="item brain">
+
+            <div class="post-info">
+             <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
+             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
+               Jan 10, 2013
+             </div>
+            </div>
+           </li>
+          </ul>
+         </div>
+    </tal:define>
+
+    <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'classify':'coworker'},
+                                             sort_on='created', sort_order='reverse')">
+         <div id="coworkertab" class="tab-pane active">
+          <ul class="simple-post-list">
+           <li tal:repeat="item brain">
+
+            <div class="post-info">
+             <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
+             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
+               Jan 10, 2013
+             </div>
+            </div>
+           </li>
+          </ul>
+         </div>
+    </tal:define>
+
+    <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'classify':'honor'},
+                                             sort_on='created', sort_order='reverse')">
+         <div id="honortab" class="tab-pane active">
+          <ul class="simple-post-list">
+           <li tal:repeat="item brain">
+
+            <div class="post-info">
+             <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
+             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
+               Jan 10, 2013
+             </div>
+            </div>
+           </li>
+          </ul>
+         </div>
+    </tal:define>
+        </div>
 </div>
+
+
+<div class="tabs">
+        <h2>行政公告</h2>
+        <ul class="nav nav-tabs">
+         <li class="active"><a data-toggle="tab" href="#adma" i18n:translate="">adma</a></li>
+         <li><a data-toggle="tab" href="#admb" i18n:translate="">admb</a></li>
+         <li><a data-toggle="tab" href="#admc" i18n:translate="">admc</a></li>
+         <li><a data-toggle="tab" href="#admd" i18n:translate="">admd</a></li>
+         <li><a data-toggle="tab" href="#adme" i18n:translate="">adme</a></li>
+         <li><a data-toggle="tab" href="#amdf" i18n:translate="">admf</a></li>
+         <li><a data-toggle="tab" href="#admg" i18n:translate="">admg</a></li>
+        </ul>
+
+
+
+        <div class="tab-content" tal:define="catalog python:context.portal_catalog">
+
+    <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'department':'adma'},
+                                             sort_on='created', sort_order='reverse')">
+         <div id="adma" class="tab-pane active">
+          <ul class="simple-post-list">
+           <li tal:repeat="item brain">
+
+            <div class="post-info">
+             <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
+             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
+               Jan 10, 2013
+             </div>
+            </div>
+           </li>
+          </ul>
+         </div>
+    </tal:define>
+
+    <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'department':'admb'}, 
+                                             sort_on='created', sort_order='reverse')">
+         <div id="admb" class="tab-pane active">
+          <ul class="simple-post-list">
+           <li tal:repeat="item brain">
+
+            <div class="post-info">
+             <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
+             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
+               Jan 10, 2013
+             </div>
+            </div>
+           </li>
+          </ul>
+         </div>
+    </tal:define>
+
+    <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'department':'admc'}, 
+                                             sort_on='created', sort_order='reverse')">
+         <div id="admc" class="tab-pane active">
+          <ul class="simple-post-list">
+           <li tal:repeat="item brain">
+
+            <div class="post-info">
+             <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
+             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
+               Jan 10, 2013
+             </div>
+            </div>
+           </li>
+          </ul>
+         </div>
+    </tal:define>
+
+    <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'department':'admd'}, 
+                                             sort_on='created', sort_order='reverse')">
+         <div id="admd" class="tab-pane active">
+          <ul class="simple-post-list">
+           <li tal:repeat="item brain">
+
+            <div class="post-info">
+             <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
+             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
+               Jan 10, 2013
+             </div>
+            </div>
+           </li>
+          </ul>
+         </div>
+    </tal:define>
+
+    <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'department':'adme'}, 
+                                             sort_on='created', sort_order='reverse')">
+         <div id="adme" class="tab-pane active">
+          <ul class="simple-post-list">
+           <li tal:repeat="item brain">
+
+            <div class="post-info">
+             <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
+             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
+               Jan 10, 2013
+             </div>
+            </div>
+           </li>
+          </ul>
+         </div>
+    </tal:define>
+
+    <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'department':'admf'}, 
+                                             sort_on='created', sort_order='reverse')">
+         <div id="admf" class="tab-pane active">
+          <ul class="simple-post-list">
+           <li tal:repeat="item brain">
+
+            <div class="post-info">
+             <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
+             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
+               Jan 10, 2013
+             </div>
+            </div>
+           </li>
+          </ul>
+         </div>
+    </tal:define>
+
+    <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'department':'admg'}, 
+                                             sort_on='created', sort_order='reverse')">
+         <div id="admg" class="tab-pane active">
+          <ul class="simple-post-list">
+           <li tal:repeat="item brain">
+
+            <div class="post-info">
+             <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
+             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
+               Jan 10, 2013
+             </div>
+            </div>
+           </li>
+          </ul>
+         </div>
+    </tal:define>
+
+        </div>
+</div>
+
+
+
+
+
+
 
 
 
