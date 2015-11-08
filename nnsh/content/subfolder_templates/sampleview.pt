@@ -11,7 +11,7 @@
   <metal:content-core define-macro="content-core">
 
 <div id="nnsh-news">
-    <h3 i18n:translate="">NNSH News</h3>
+    <h3 tal:content="context/Title" />
     <tal:define define="brain context/@@folderListing">
       <ul class="list">
 <tal:getItem repeat="item python:brain[:20]">
@@ -28,7 +28,9 @@
               <span tal:replace="item/Title" />
             </a>
 <!--            <span tal:content="python:' [%s] ' % item.Type()"></span> -->
-            <span tal:content="python:' -- %s' % item.created.strftime('%Y/%m/%d')"></span>
+<!--
+            <span tal:content="python:' - - %s' % item.created.strftime('%Y/%m/%d')"></span>
+-->
             <p><tal:description content="item/Description" /></p>
         </li>
 </tal:getItem>

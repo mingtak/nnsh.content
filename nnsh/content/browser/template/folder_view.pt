@@ -33,7 +33,9 @@
 -->
               <span tal:replace="item/Title" />
             </a>
-            <span tal:content="python:' -- %s' % item.created.strftime('%Y/%m/%d')"></span>
+<!--
+            <span tal:content="python:' - - %s' % item.created.strftime('%Y/%m/%d')"></span>
+-->
             <p><tal:description content="item/Description" /></p>
         </li>
       </ul>
