@@ -18,12 +18,13 @@
         <li tal:condition="python:item.Type() != 'Image'">
             <a tal:attributes="href item/getURL;
                                title item/Description">
-              <img tal:condition="python:getattr(item.getObject(), 'image', False)"
+<!--              <img tal:condition="python:getattr(item.getObject(), 'image', False)"
                    tal:attributes="src string:${item/getURL}/@@images/image/tile;
                                    alt item/Title; title item/Title">
               <img tal:condition="not:python:getattr(item.getObject(), 'image', False)"
                    tal:attributes="alt item/Title; title item/Title;
                                    src string:${context/absolute_url}/system/201506211216/logo53bb80cc.png/@@images/image/tile">
+-->
               <span tal:replace="item/Title" />
             </a>
 <!--            <span tal:content="python:' [%s] ' % item.Type()"></span> -->

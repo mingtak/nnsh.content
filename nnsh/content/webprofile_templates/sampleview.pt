@@ -106,7 +106,7 @@
          <li><a data-toggle="tab" href="#admc" i18n:translate="">admc</a></li>
          <li><a data-toggle="tab" href="#admd" i18n:translate="">admd</a></li>
          <li><a data-toggle="tab" href="#adme" i18n:translate="">adme</a></li>
-         <li><a data-toggle="tab" href="#amdf" i18n:translate="">admf</a></li>
+         <li><a data-toggle="tab" href="#admf" i18n:translate="">admf</a></li>
          <li><a data-toggle="tab" href="#admg" i18n:translate="">admg</a></li>
         </ul>
 
