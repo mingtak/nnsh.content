@@ -10,12 +10,12 @@
 <metal:main fill-slot="content-core">
   <metal:content-core define-macro="content-core">
 
-    <img tal:condition="context/image"
+<!--    <img tal:condition="context/image"
          tal:attributes="src string:${context/absolute_url}/@@images/image/mini;
                          alt context/Description;
                          title context/Title"
          style="float:left; margin: 20px 20px 20px 20px;" />
-
+-->
 
 <h3 tal:content="context/Title"></h3>
 

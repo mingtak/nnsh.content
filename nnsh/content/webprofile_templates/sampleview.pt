@@ -27,17 +27,15 @@
 
         <div class="tab-content" tal:define="catalog python:context.portal_catalog">
 
-    <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'classify':'news'},
+    <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'classify':['news','student','coworker','honor']},
                                              sort_on='created', sort_order='reverse')">
          <div id="newstab" class="tab-pane active">
           <ul class="simple-post-list">
-           <li tal:repeat="item brain">
+           <li tal:repeat="item python:brain[0:20]">
 
             <div class="post-info">
              <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
-             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
-               Jan 10, 2013
-             </div>
+             <span class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')" />
             </div>
            </li>
           </ul>
@@ -48,13 +46,11 @@
                                              sort_on='created', sort_order='reverse')">
          <div id="studenttab" class="tab-pane active">
           <ul class="simple-post-list">
-           <li tal:repeat="item brain">
+           <li tal:repeat="item python:brain[0:20]">
 
             <div class="post-info">
              <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
-             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
-               Jan 10, 2013
-             </div>
+             <span class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')" />
             </div>
            </li>
           </ul>
@@ -65,13 +61,11 @@
                                              sort_on='created', sort_order='reverse')">
          <div id="coworkertab" class="tab-pane active">
           <ul class="simple-post-list">
-           <li tal:repeat="item brain">
+           <li tal:repeat="item python:brain[0:20]">
 
             <div class="post-info">
              <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
-             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
-               Jan 10, 2013
-             </div>
+             <span class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')" />
             </div>
            </li>
           </ul>
@@ -82,13 +76,11 @@
                                              sort_on='created', sort_order='reverse')">
          <div id="honortab" class="tab-pane active">
           <ul class="simple-post-list">
-           <li tal:repeat="item brain">
+           <li tal:repeat="item python:brain[0:20]">
 
             <div class="post-info">
              <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
-             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
-               Jan 10, 2013
-             </div>
+             <span class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')" />
             </div>
            </li>
           </ul>
@@ -118,13 +110,11 @@
                                              sort_on='created', sort_order='reverse')">
          <div id="adma" class="tab-pane active">
           <ul class="simple-post-list">
-           <li tal:repeat="item brain">
+           <li tal:repeat="item python:brain[0:20]">
 
             <div class="post-info">
              <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
-             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
-               Jan 10, 2013
-             </div>
+             <span class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')" />
             </div>
            </li>
           </ul>
@@ -135,13 +125,11 @@
                                              sort_on='created', sort_order='reverse')">
          <div id="admb" class="tab-pane active">
           <ul class="simple-post-list">
-           <li tal:repeat="item brain">
+           <li tal:repeat="item python:brain[0:20]">
 
             <div class="post-info">
              <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
-             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
-               Jan 10, 2013
-             </div>
+             <span class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')" />
             </div>
            </li>
           </ul>
@@ -152,13 +140,11 @@
                                              sort_on='created', sort_order='reverse')">
          <div id="admc" class="tab-pane active">
           <ul class="simple-post-list">
-           <li tal:repeat="item brain">
+           <li tal:repeat="item python:brain[0:20]">
 
             <div class="post-info">
              <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
-             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
-               Jan 10, 2013
-             </div>
+             <span class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')" />
             </div>
            </li>
           </ul>
@@ -169,13 +155,11 @@
                                              sort_on='created', sort_order='reverse')">
          <div id="admd" class="tab-pane active">
           <ul class="simple-post-list">
-           <li tal:repeat="item brain">
+           <li tal:repeat="item python:brain[0:20]">
 
             <div class="post-info">
              <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
-             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
-               Jan 10, 2013
-             </div>
+             <span class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')" />
             </div>
            </li>
           </ul>
@@ -186,13 +170,11 @@
                                              sort_on='created', sort_order='reverse')">
          <div id="adme" class="tab-pane active">
           <ul class="simple-post-list">
-           <li tal:repeat="item brain">
+           <li tal:repeat="item python:brain[0:20]">
 
             <div class="post-info">
              <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
-             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
-               Jan 10, 2013
-             </div>
+             <span class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')" />
             </div>
            </li>
           </ul>
@@ -203,13 +185,11 @@
                                              sort_on='created', sort_order='reverse')">
          <div id="admf" class="tab-pane active">
           <ul class="simple-post-list">
-           <li tal:repeat="item brain">
+           <li tal:repeat="item python:brain[0:20]">
 
             <div class="post-info">
              <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
-             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
-               Jan 10, 2013
-             </div>
+             <span class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')" />
             </div>
            </li>
           </ul>
@@ -220,13 +200,11 @@
                                              sort_on='created', sort_order='reverse')">
          <div id="admg" class="tab-pane active">
           <ul class="simple-post-list">
-           <li tal:repeat="item brain">
+           <li tal:repeat="item python:brain[0:20]">
 
             <div class="post-info">
              <a tal:attributes="href item/getURL" tal:content="item/Title">Nullam Vitae Nibh Un Odiosters</a>
-             <div class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')">
-               Jan 10, 2013
-             </div>
+             <span class="post-meta" tal:content="python:'%s' % item.created.strftime('%Y-%m-%d')" />
             </div>
            </li>
           </ul>
