@@ -44,7 +44,7 @@
 
     <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'classify':'student'},
                                              sort_on='created', sort_order='reverse')">
-         <div id="studenttab" class="tab-pane active">
+         <div id="studenttab" class="tab-pane">
           <ul class="simple-post-list">
            <li tal:repeat="item python:brain[0:20]">
 
@@ -59,7 +59,7 @@
 
     <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'classify':'coworker'},
                                              sort_on='created', sort_order='reverse')">
-         <div id="coworkertab" class="tab-pane active">
+         <div id="coworkertab" class="tab-pane">
           <ul class="simple-post-list">
            <li tal:repeat="item python:brain[0:20]">
 
@@ -74,7 +74,7 @@
 
     <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'classify':'honor'},
                                              sort_on='created', sort_order='reverse')">
-         <div id="honortab" class="tab-pane active">
+         <div id="honortab" class="tab-pane">
           <ul class="simple-post-list">
            <li tal:repeat="item python:brain[0:20]">
 
@@ -123,7 +123,7 @@
 
     <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'department':'admb'}, 
                                              sort_on='created', sort_order='reverse')">
-         <div id="admb" class="tab-pane active">
+         <div id="admb" class="tab-pane">
           <ul class="simple-post-list">
            <li tal:repeat="item python:brain[0:20]">
 
@@ -138,7 +138,7 @@
 
     <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'department':'admc'}, 
                                              sort_on='created', sort_order='reverse')">
-         <div id="admc" class="tab-pane active">
+         <div id="admc" class="tab-pane">
           <ul class="simple-post-list">
            <li tal:repeat="item python:brain[0:20]">
 
@@ -153,7 +153,7 @@
 
     <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'department':'admd'}, 
                                              sort_on='created', sort_order='reverse')">
-         <div id="admd" class="tab-pane active">
+         <div id="admd" class="tab-pane">
           <ul class="simple-post-list">
            <li tal:repeat="item python:brain[0:20]">
 
@@ -168,7 +168,7 @@
 
     <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'department':'adme'}, 
                                              sort_on='created', sort_order='reverse')">
-         <div id="adme" class="tab-pane active">
+         <div id="adme" class="tab-pane">
           <ul class="simple-post-list">
            <li tal:repeat="item python:brain[0:20]">
 
@@ -183,7 +183,7 @@
 
     <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'department':'admf'}, 
                                              sort_on='created', sort_order='reverse')">
-         <div id="admf" class="tab-pane active">
+         <div id="admf" class="tab-pane">
           <ul class="simple-post-list">
            <li tal:repeat="item python:brain[0:20]">
 
@@ -198,7 +198,7 @@
 
     <tal:define define="brain python:catalog({'Type':['News Item', 'Epaper'], 'department':'admg'}, 
                                              sort_on='created', sort_order='reverse')">
-         <div id="admg" class="tab-pane active">
+         <div id="admg" class="tab-pane">
           <ul class="simple-post-list">
            <li tal:repeat="item python:brain[0:20]">
 
